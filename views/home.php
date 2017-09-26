@@ -15,16 +15,19 @@
         DarkSky API
       </h1>
       <div class="card p-4 my-5 mx-auto" style="max-width: 320px;">
-        <h2 class="display-1">
-          <?php echo round($forecast['currently']['temperature']); ?>
+        <h2 class="display-1 mb-0">
+          <?php echo round($forecast['currently']['temperature']); ?>&deg;
         </h2>
+        <p class="lead">
+          <?php echo $forecast['currently']['summary']; ?>
+        </p>
       </div>
       <div class="row">
         <?php foreach($forecast['daily']['data'] as $day): ?>
           <div class="col-12 col-md-3">
             <div class="card p-4 my-5 mx-auto"">
               <h2 class="m-0">
-                <?php echo round($day['temperatureHigh']); ?>
+                <?php echo round($day['temperatureHigh']); ?>&deg;
               </h2>
               <p class="lead text-left">
                 <?php echo $day['summary']; ?>
