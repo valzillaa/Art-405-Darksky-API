@@ -8,7 +8,7 @@
   </head>
   <body>
     <pre>
-      <?php print_r($forecast); ?>
+      <?php //print_r($forecast); ?>
     </pre>
     <main class="container py-5 text-center">
       <h1>
@@ -22,6 +22,13 @@
           <?php echo $forecast['currently']['summary']; ?>
         </p>
       </div>
+      <p class="lead">
+        <?php echo $forecast['currently']['summary'];?>
+      </p>
+      <p><?php echo $feels; ?></p>
+      <p class="lead">
+        Wind Speed: <?php echo round$forecast['currently']['windSpeed'];?> MPH
+      </p>
       <div class="row">
         <?php foreach($forecast['daily']['data'] as $day): ?>
           <div class="col-12 col-md-3">
